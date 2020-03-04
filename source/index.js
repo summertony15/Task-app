@@ -5,7 +5,7 @@ const taskRouter = require('./router/task')
 
 const app = express()
 //process.env.PORT 是heroku環境
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 
 app.use(express.json()) //Automatically Parse json to an object
 app.use(userRouter)

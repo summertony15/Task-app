@@ -4,13 +4,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node source/index.js",
-    "dev": "nodemon source/index.js"
+    "dev": "env-cmd -f ./config/dev.env  nodemon source/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
+  "dependencies": { 
+    "@sendgrid/mail": "^6.5.3",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
@@ -21,6 +22,7 @@
     "validator": "^12.2.0"
   },
   "devDependencies": {
+    "env-cmd": "^10.1.0",
     "nodemon": "^2.0.2"
   }
 }
